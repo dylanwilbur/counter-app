@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TimerTest < ActiveSupport::TestCase
   def setup
-    @now = Time.now
+    @start = Time.now
     @timer = Timer.new()
   end
   
@@ -12,9 +12,8 @@ class TimerTest < ActiveSupport::TestCase
   
   test "should get correct time" do
     sleep(2)
-    correct_time = (Time.now - @now).floor
+    correct_time = (Time.now - @start).floor
     assert_equal(2, correct_time)
-    puts "correct time: " + correct_time.to_s
     assert_equal(correct_time, @timer.elapsed_time)
   end
 end

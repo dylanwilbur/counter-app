@@ -3,14 +3,10 @@ class Timer < ApplicationRecord
   before_create :elapsed_time
   before_save :elapsed_time
   
-  def initialize()
-    @start = Time.now
-  end
-  
   def elapsed_time
     now = Time.now
-    elapsed = (now-@start).floor
-    #self.time = elapsed
+    elapsed = (now-self.created_at).floor
     elapsed
   end
+  
 end
