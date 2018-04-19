@@ -1,4 +1,8 @@
 class TimersController < ApplicationController
+  respond_to :js
+  respond_to :html
+  #resolve respond_to error
+  
   def new
     @timer = Timer.new
   end
@@ -8,6 +12,7 @@ class TimersController < ApplicationController
   end
   
   def index
+    @timers = Timer.all
   end
   
   def create

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TimersControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get timers_new_url
+    get stopwatch_path
     assert_response :success
   end
 

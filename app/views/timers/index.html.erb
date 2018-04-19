@@ -1,3 +1,7 @@
-<h1>
-  Stopwatch!
-</h1>
+<h1>Timers</h1>
+
+<ul id=timers>
+  <% @timers.each do |timer| %>
+    <li><%= link_to "Timer number", timer_path(timer) %> <%= timer.id %>: <%= timer.elapsed_time %></li>
+  <% end %>
+</ul>

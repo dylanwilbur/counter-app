@@ -3,7 +3,8 @@ require 'test_helper'
 class TimerTest < ActiveSupport::TestCase
   def setup
     @start = Time.now
-    @timer = Timer.new()
+    @timer = Timer.new
+    @timer.save
   end
   
   test "should be valid" do

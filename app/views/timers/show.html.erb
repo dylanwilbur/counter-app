@@ -1,6 +1,15 @@
 <h1>
   This is the timer!
 </h1>
-<clock>
-  0
-</clock>
+<div class="container">
+  <div id='counter'>
+    <h2><clock><%= @timer.elapsed_time %></clock></h2>
+    <button class="btn btn-success start">Start</button>
+    <% javascript_include_tag "counter"%>
+  </div>
+</div>
+
+
+<h3 id='change'>
+  <%= @timer.elapsed_time %>
+</h3>
