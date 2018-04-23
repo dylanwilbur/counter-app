@@ -2,6 +2,6 @@
 
 <ul id=timers>
   <% @timers.each do |timer| %>
-    <li><%= link_to "Timer number", timer_path(timer) %> <%= timer.id %>: <%= timer.elapsed_time %></li>
+    <li><%= link_to "Timer number", timer_path(timer), class: "btn btn-secondary" %> <%= timer.id %>: <%= timer.elapsed_time %></li>
   <% end %>
 </ul>
