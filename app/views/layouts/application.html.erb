@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <nav nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to "Counter App", root_path, id: "logo", class: "navbar-brand" %>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> <%= link_to "Timers", timers_index_path, class: "nav-link" %></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <%= yield %>
     </div>

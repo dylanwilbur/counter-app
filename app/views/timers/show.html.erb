@@ -4,7 +4,6 @@ Counter <%= @timer.id %>
 <div class="container">
   <div id='counter'>
     <h2><clock><%= @timer.elapsed_time %></clock></h2>
-    <% #javascript_include_tag "counter"%>
     <script>
       var myVar = setInterval(myTimer, 1000);
       var time = <%= @timer.elapsed_time %>
