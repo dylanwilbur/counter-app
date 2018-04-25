@@ -2,6 +2,9 @@
 
 <ul id=timers>
   <% @timers.each do |timer| %>
-    <li><%= link_to "Timer #{timer.id}", timer_path(timer), class: "btn btn-secondary" %> : <%= timer.elapsed_time %></li>
+    <li>
+      <%= link_to "Timer #{timer.id}", timer_path(timer), class: "btn btn-secondary" %> : <%= timer.elapsed_time %>
+      | <%= link_to "delete", timer, method: :delete, data: {confirm: "You sure?"} %>
+    </li>
   <% end %>
 </ul>

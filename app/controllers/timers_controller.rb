@@ -25,4 +25,10 @@ class TimersController < ApplicationController
       render 'new'
     end
   end
+  
+  def destroy
+    Timer.find(params[:id]).destroy
+    flash[:success] = "Timer deleted"
+    redirect_to timers_url
+  end
 end
