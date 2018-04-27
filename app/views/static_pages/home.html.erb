@@ -12,6 +12,21 @@
       <div style="text-align:center;">
         <%= button_to 'Timers', timers_index_path, method: :get, class: "btn btn-primary" %>
       </div>
+      <% if logged_in? %>
+      <div class="container">
+        <div id='counter'>
+          <h2 class="clock"><%= current_timer.elapsed_time %></h2>
+          <script>
+            var myVar = setInterval(myTimer, 1000);
+            var time = <%= current_timer.elapsed_time %>
+            function myTimer() {
+              document.querySelector(".clock").innerHTML = time;
+              time++;
+            }
+          </script>
+        </div>
+      </div>
+      <% end %>
     </div>
   </body>
 </html>

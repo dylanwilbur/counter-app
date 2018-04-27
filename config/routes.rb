@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'timers/index'
   
   get '/stopwatch', to: 'timers#new'

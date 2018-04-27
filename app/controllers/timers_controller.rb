@@ -20,6 +20,8 @@ class TimersController < ApplicationController
     puts @timer.inspect
     
     if @timer.save
+      log_in @timer
+      flash[:success] = "Timer successfully created"
       redirect_to @timer
     else
       render 'new'
