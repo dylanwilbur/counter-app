@@ -19,7 +19,11 @@
           <% else %>
             <li class="nav-item"> <%= link_to "New Timer", stopwatch_path, class: "nav-link" %></li>
           <% end %>
-          
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <% if logged_in? %>
+            <li class="nav-item"> <%= link_to "Log out", '#', class: "nav-link" %></li>
+          <% end %>
         </ul>
       </div>
     </nav>
