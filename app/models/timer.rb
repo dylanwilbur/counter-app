@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class Timer < ApplicationRecord
   attr_accessor :remember_token
   #validates :time, presence: true
@@ -13,6 +15,10 @@ class Timer < ApplicationRecord
     end
   end
   
+  def Timer.digest(input)
+    Digest::SHA1.hexdigest(input)
+  end
+  
   def Timer.new_token
     SecureRandom.urlsafe_base64
   end
@@ -22,9 +28,8 @@ class Timer < ApplicationRecord
     update_attribute(:remember_digest, Timer.digest(remember_token))
   end
   
-  # Returns true if the given token matches the digest
-  def authenticated?(remember_token)
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  def forget
+    update_attribute(:remember_digest, nil)
   end
   
 end

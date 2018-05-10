@@ -1,6 +1,6 @@
 class TimersController < ApplicationController
-  respond_to :js
   respond_to :html
+  respond_to :js
   #resolve respond_to error
   
   def new
