@@ -13,7 +13,9 @@
       <%= link_to "Counter App", root_path, id: "logo", class: "navbar-brand" %>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+          <% if cookies[:lockup] %>
           <li class="nav-item"> <%= link_to "Timers", timers_index_path, class: "nav-link" %></li>
+          <% end %>
           <% if logged_in? %>
             <li class="nav-item"> <%= link_to "Reset Timer", '#', class: "nav-link" %></li>
           <% else %>

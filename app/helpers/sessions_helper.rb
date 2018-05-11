@@ -31,6 +31,7 @@ module SessionsHelper
     timer.forget
     cookies.delete(:timer_id)
     cookies.delete(:remember_token)
+    cookies.delete(:lockup)
   end
   
   def log_out

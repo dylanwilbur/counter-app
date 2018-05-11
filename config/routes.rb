@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  mount Lockup::Engine, at: '/lockup'
 
   get 'timers/index'
   
