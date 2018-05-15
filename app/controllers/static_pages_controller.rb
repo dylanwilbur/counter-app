@@ -1,12 +1,8 @@
 class StaticPagesController < ApplicationController
   
   def home
-    timer = Timer.find_by(id: params[:id])
-    if timer
-      log_in timer
-      redirect_to timer
-    else
-      flash[:danger] = "Session create machine broke"
+    if !session[:timer_id].nil?
+      redirect_to timer_path(session[:timer_id])
     end
   end
 
