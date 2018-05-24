@@ -1,9 +1,9 @@
 <h1>
-Counter <%= @timer.id %>
+Counter
 </h1>
 <div class="container">
   <div id='counter'>
-    <h2><clock><%= @timer.elapsed_time %></clock></h2>
+    <h2><clock><%= @timer.elapsed_time %></clock> Deaths</h2>
     <script>
       var myVar = setInterval(myTimer, 1000);
       var time = <%= @timer.elapsed_time %>
