@@ -1,10 +1,8 @@
-<h1>
-Counter
-</h1>
+<h1>Counter</h1>
 <div class="container">
   <div id='counter'>
-    <h2><clock><%= @timer.elapsed_time %></clock> Deaths</h2>
-    <script>
+    <h2><clock><%= @timer.elapsed_time %></clock></h2>
+    <script data-turbolinks-eval=false>
       var myVar = setInterval(myTimer, 1000);
       var time = <%= @timer.elapsed_time %>
       function myTimer() {

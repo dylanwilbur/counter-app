@@ -1,13 +1,17 @@
+/* Custom Variables */
+
 $theme-colors: (
   "primary": #a70000
 );
 
 @import "bootstrap";
 
-
-
 h1,h2 {
   text-align: center;
+}
+
+body {
+  padding-top: 60px;
 }
 
 p {
@@ -20,16 +24,22 @@ button {
 
 #timers {
   list-style-type: none;
-  margin: 10px 0;
 }
 
-// footer
+#timers-item {
+  margin: 5px 0;
+}
+
+/* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 20px;
 }
 
 footer a {
