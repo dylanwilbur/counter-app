@@ -14,7 +14,6 @@ module SessionsHelper
         @current_timer = timer
       end
     end
-      
   end
   
   def logged_in?
