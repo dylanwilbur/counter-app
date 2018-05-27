@@ -12,7 +12,14 @@
   </div>
   
   <hr>
-  
-  <%= render "layouts/stories/#{cookies[:story_num]}" %>
+  <div class="container">
+    <div class="box">
+      <div class="row row-one">
+        <div class="col-md-12 imageholder">
+          <%= render "layouts/stories/#{cookies[:story_num]}" %>
+        </div>
+      </div>
+    </div>
+  </div>
   
 </div>

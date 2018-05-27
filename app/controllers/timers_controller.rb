@@ -3,7 +3,7 @@ class TimersController < ApplicationController
   respond_to :js
   before_action :check_for_lockup, only: [:index]
   #resolve respond_to error
-  TOTAL_STORY_COUNT = 2
+  TOTAL_STORY_COUNT = 3
   
   def new
     @timer = Timer.new
