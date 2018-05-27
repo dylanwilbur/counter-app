@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
 
-  get 'static_pages/info'
+  get 'static_pages/info', :defaults => { :format => 'json' }
   
   get '/login', to: 'sessions#new'
   
@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   
   resources :timers
+
 end

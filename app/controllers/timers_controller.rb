@@ -10,6 +10,7 @@ class TimersController < ApplicationController
   end
   
   def show
+    
     @timer = Timer.find(params[:id])
     if cookies[:story_num].nil?
       cookies[:story_num] = rand(TOTAL_STORY_COUNT)
