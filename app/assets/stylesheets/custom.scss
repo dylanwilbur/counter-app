@@ -6,6 +6,12 @@ $theme-colors: (
 
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 body {
   padding-top: 60px;
 }
@@ -25,6 +31,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  padding-top: 20px;
 }
 
 h2 {
@@ -38,6 +45,13 @@ h2 {
 
 blockquote {
   text-align: center;
+}
+
+/* home */
+
+.btn {
+  width: 150px !important;
+  margin: 5px;
 }
 
 /* index */
@@ -59,6 +73,8 @@ blockquote {
 clock {
   color: #a70000;
   font-size: 64px;
+  letter-spacing: normal;
+  font-weight: 500;
 }
 
 /* show story content */
@@ -118,4 +134,38 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* forms */
+
+input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+.control-label {
+  font-weight: 500;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto; 
+  margin: 0 auto; 
+  display: block;
+  text-align: center;
+}
+
+.timer-form {
+  width: 50%; 
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-align: left;
 }

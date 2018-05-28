@@ -23,8 +23,12 @@
           <%= button_to 'Timers', timers_index_path, method: :get, class: "btn btn-primary" %>
         </div>
       <% else %>
-        <div style="text-align:center;">
-          <%= button_to 'New Timer', stopwatch_path, method: :get, class: "btn btn-primary" %>
+        <div class="wrapper text-center">
+          <div class="btn-group">
+            <%= button_to 'Enter Code', '#', method: :get, class: "btn btn-primary"%>
+            <%= button_to 'New Counter', new_timer_path, method: :get, class: "btn btn-primary"%>
+            <%= button_to 'About', about_path, method: :get, class: "btn btn-primary"%>
+          </div>
         </div>
       <% end %>
     </div>

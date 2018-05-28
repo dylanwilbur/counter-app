@@ -2,9 +2,6 @@ require 'digest/sha1'
 
 class Timer < ApplicationRecord
   attr_accessor :remember_token
-  #validates :time, presence: true
-  #before_create :elapsed_time
-  #before_save :elapsed_time
   
   def elapsed_time
     if !self.nil?

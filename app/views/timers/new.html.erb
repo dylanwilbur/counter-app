@@ -1,6 +1,18 @@
 <h1>
-  New Timer
+  New Counter
 </h1>
-<div style="text-align:center;">
-  <%= button_to 'Start Timer', stopwatch_path, class: "btn btn-primary"%>
+<div class="wrapper">
+  <%= form_with model: @timer, :html => {:class => "timer-form"} do |f| %>
+    <div class="form-group">
+      <%= f.label :email, class: "control-label" %>
+      <%= f.email_field :email, class: "form-control" %>
+      <small id="passwordHelpBlock" class="form-text text-muted">
+        Optional: enter email where you can recover your timer
+      </small>
+    </div>
+
+
+    <%= f.submit "Create counter", class: "btn btn-primary" %>
+  <% end %>
+  </div>
 </div>

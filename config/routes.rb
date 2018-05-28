@@ -3,10 +3,6 @@ Rails.application.routes.draw do
   mount Lockup::Engine, at: '/lockup'
 
   get 'timers/index'
-  
-  get '/stopwatch', to: 'timers#new'
-  
-  post '/stopwatch', to: 'timers#create'
 
   get '/about', to: 'static_pages#about'
   
