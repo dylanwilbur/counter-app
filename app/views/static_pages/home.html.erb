@@ -8,7 +8,16 @@
   <body>
     
     <div class="center jumbotron">
-      <h1>Welcome to the Home Page</h1>
+      <h1>Six Million Stories</h1>
+      <!-- <blockquote class="blockquote">
+        <p>"The death of one man is a tragedy, the death of millions is a statistic."</p>
+        <footer class="blockquote-footer"><cite title="Source Title">Joseph Stalin</cite></footer>
+      </blockquote> -->
+      <h2>
+        An an application that visualizes the enormity of the number of deaths reported
+        in mass tragedies, specifically the holocaust, by recognizing that within
+        every singular digit in these large numbers is the story of a human being.
+      </h2>
       <% if cookies[:lockup] %>
         <div style="text-align:center;">
           <%= button_to 'Timers', timers_index_path, method: :get, class: "btn btn-primary" %>

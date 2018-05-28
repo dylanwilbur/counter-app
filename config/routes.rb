@@ -8,9 +8,7 @@ Rails.application.routes.draw do
   
   post '/stopwatch', to: 'timers#create'
 
-  get 'static_pages/home'
-
-  get 'static_pages/info'
+  get '/about', to: 'static_pages#about'
   
   get '/login', to: 'sessions#new'
   

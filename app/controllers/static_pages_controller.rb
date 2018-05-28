@@ -6,6 +6,6 @@ class StaticPagesController < ApplicationController
     end
   end
 
-  def info
+  def about
   end
 end
