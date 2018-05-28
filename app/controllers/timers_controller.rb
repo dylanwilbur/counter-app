@@ -23,8 +23,7 @@ class TimersController < ApplicationController
   end
   
   def create
-    @timer = Timer.new
-    puts @timer.inspect
+    @timer = Timer.new(timer_params)
     
     if @timer.save
       log_in @timer
@@ -40,4 +39,12 @@ class TimersController < ApplicationController
     flash[:success] = "Timer deleted"
     redirect_to timers_url
   end
+  
+  private
+  
+    def timer_params
+      params.require(:timer).permit(:email)
+    end
+  
+  
 end

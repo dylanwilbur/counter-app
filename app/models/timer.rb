@@ -2,6 +2,11 @@ require 'digest/sha1'
 
 class Timer < ApplicationRecord
   attr_accessor :remember_token
+  before_save :process_input
+  #regex allows for empty strings- maybe will fix later?
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z|\A\z/i
+  validates :email, allow_nil: true, length: { maximum: 255 }, 
+                                    format: { with: VALID_EMAIL_REGEX }
   
   def elapsed_time
     if !self.nil?
@@ -29,4 +34,15 @@ class Timer < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
   
+  private
+  
+    def process_input
+      if !email.blank?
+        email.downcase!
+      else
+        self.email = nil
+      end
+    end
+        
+        
 end
