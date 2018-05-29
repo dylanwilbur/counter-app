@@ -7,9 +7,9 @@ $theme-colors: (
 @import "bootstrap";
 
 @mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+  -moz-box-sizing:    content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing:         content-box;
 }
 
 body {
@@ -168,4 +168,19 @@ input {
   margin-right: auto;
   display: inline-block;
   text-align: left;
+}
+
+/* debug dump */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  
+  @include box_sizing
+}
+
+.card {
+  margin-top: 20px;
+  background: $gray-100;
 }

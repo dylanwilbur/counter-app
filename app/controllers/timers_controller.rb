@@ -31,7 +31,6 @@ class TimersController < ApplicationController
       redirect_to @timer
     else
       render 'new'
-      debugger
     end
   end
   

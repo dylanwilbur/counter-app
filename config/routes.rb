@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   mount Lockup::Engine, at: '/lockup'
 
   get 'timers/index'
+  
+  get '/for-teachers', to: 'static_pages#for_teachers'
 
   get '/about', to: 'static_pages#about'
   
