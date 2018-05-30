@@ -1,7 +1,7 @@
 class TimersController < ApplicationController
   respond_to :html
   respond_to :js
-  before_action :check_for_lockup, only: [:index]
+  #before_action :check_for_lockup, only: [:index]
   #resolve respond_to error
   TOTAL_STORY_COUNT = 3
   
