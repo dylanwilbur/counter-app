@@ -1,9 +1,8 @@
 class TimersController < ApplicationController
   respond_to :html
   respond_to :js
-  before_action :check_for_lockup, only: [:index]
+  #before_action :check_for_lockup, only: [:index]
   #resolve respond_to error
-  TOTAL_STORY_COUNT = 3
   
   def new
     @timer = Timer.new
@@ -12,10 +11,11 @@ class TimersController < ApplicationController
   def show
     @timer = Timer.find(params[:id])
     if cookies[:story_num].nil?
-      cookies[:story_num] = rand(TOTAL_STORY_COUNT)
+      cookies[:story_num] = rand(Story.count)
     else
-      cookies[:story_num] = ((cookies[:story_num].to_i + 1) % TOTAL_STORY_COUNT).to_s
+      cookies[:story_num] = ((cookies[:story_num].to_i + 1) % Story.count).to_s
     end
+    @story = Story.find_by(cookies[:story_num])
   end
   
   def index

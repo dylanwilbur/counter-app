@@ -1,0 +1,22 @@
+<h1>Story Preview</h1>
+
+<div style="text-align:center;">
+  <%= button_to 'Edit', edit_story_path(@story), method: :get, class: "btn btn-primary" %>
+</div>
+
+<div class="container">
+  <div class="box">
+    <div class="row row-one">
+      <div class="col-md-12 imageholder">
+        <% if !(@story.img.nil?) %>
+          <img class="img-fluid img-thumbnail visual img-responsive pull-left" src=<%= @story.img %>></img>
+        <% end %>
+        
+        <h1><%= @story.name %></h1></h1> 
+        
+        <p class="lead"><%= @story.content %></p>
+      </div>
+    </div>
+  </div>
+</div>
+  

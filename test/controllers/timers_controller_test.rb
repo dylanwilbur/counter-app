@@ -11,5 +11,5 @@ class TimersControllerTest < ActionDispatch::IntegrationTest
     get new_timer_path
     assert_response :success
   end
-
+  
 end

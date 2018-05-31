@@ -6,10 +6,8 @@ $theme-colors: (
 
 @import "bootstrap";
 
-@mixin box_sizing {
-  -moz-box-sizing:    content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing:         content-box;
+h1,h2 {
+  text-align: center;
 }
 
 body {
@@ -18,40 +16,6 @@ body {
 
 button {
   float: center;
-}
-
-/* typography */
-
-h1,h2,h3,h4,h5,h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-  padding-top: 20px;
-}
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #777;
-}
-
-blockquote {
-  text-align: center;
-}
-
-/* home */
-
-.btn {
-  width: 150px !important;
-  margin: 5px;
 }
 
 /* index */
@@ -73,8 +37,6 @@ blockquote {
 clock {
   color: #a70000;
   font-size: 64px;
-  letter-spacing: normal;
-  font-weight: 500;
 }
 
 /* show story content */
@@ -136,23 +98,6 @@ footer {
   }
 }
 
-/* forms */
-
-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
-
-input {
-  height: auto !important;
-}
-
-.control-label {
-  font-weight: 500;
-}
-
 .wrapper {
   width: 100%;
   height: auto; 
@@ -161,9 +106,7 @@ input {
   text-align: center;
 }
 
-
-.input-form {
-
+.story-form {
   width: 50%; 
   margin: 0 auto;
   margin-left: auto;
@@ -171,35 +114,3 @@ input {
   display: inline-block;
   text-align: left;
 }
-
-/* debug dump */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  
-  @include box_sizing
-}
-
-.card {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background: $gray-100;
-}
-
-/* errors */
-
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .is-invalid;
-  .form-control {
-    color: red;
-  }
