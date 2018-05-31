@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   respond_to :html
   respond_to :js
   
-  #skip_before_action :check_for_lockup
+  skip_before_action :check_for_lockup
 
   protect_from_forgery with: :exception
   include SessionsHelper

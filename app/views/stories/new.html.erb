@@ -1,7 +1,7 @@
 <h1>New Story</h1>
 
 <div class="wrapper">
-  <%= form_for @story, :html => {:class => "story-form"} do |f| %>
+  <%= form_for @story, :html => {:class => "input-form"} do |f| %>
     <div class="form-group">
       <%= f.label :name, class: "control-label" %>
       <%= f.text_field :name, class: "form-control" %>
