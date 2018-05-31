@@ -46,5 +46,4 @@ class TimersController < ApplicationController
       params.require(:timer).permit(:email)
     end
   
-  
 end

@@ -2,8 +2,9 @@
   New Counter
 </h1>
 <div class="wrapper">
-  <%= form_with model: @timer, :html => {:class => "timer-form"} do |f| %>
-    <%= render 'shared/error_messages', target: @timer %>
+  
+  <%= form_for @timer, :html => {:class => "timer-form"} do |f| %>
+    <%= render 'shared/error_messages' %>
     <div class="form-group">
       <%= f.label :email, class: "control-label" %>
       <%= f.email_field :email, class: "form-control" %>
