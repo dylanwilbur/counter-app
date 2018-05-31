@@ -1,0 +1,23 @@
+<h1>New Story</h1>
+
+<div class="wrapper">
+  <%= form_for @story, :html => {:class => "story-form"} do |f| %>
+    <div class="form-group">
+      <%= f.label :name, class: "control-label" %>
+      <%= f.text_field :name, class: "form-control" %>
+      
+      <%= f.label :img, class: "control-label" %>
+      <%= f.text_field :img, class: "form-control" %>
+      <small id="nameHelpBlock" class="form-text text-muted">
+        Optional: enter link to relating image
+      </small>
+      
+      <%= f.label :content, class: "control-label" %>
+      <%= f.text_area :content, class: "form-control" %>
+    </div>
+
+
+    <%= f.submit "Create story", class: "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>

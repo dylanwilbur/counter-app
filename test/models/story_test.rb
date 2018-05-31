@@ -21,4 +21,9 @@ class StoryTest < ActiveSupport::TestCase
     @story.name = nil
     assert_not @story.valid?
   end
+  
+  test "name should be at most 50 characters" do
+    @story.name = "a" * 51
+    assert_not @story.valid?
+  end
 end
