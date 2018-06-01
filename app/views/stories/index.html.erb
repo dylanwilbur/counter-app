@@ -5,7 +5,7 @@
     <li class="object-item">
       <%= link_to "Story #{story.id}", story_path(story), class: "btn btn-secondary" %> : <%= story.name %>
       | <%= link_to "delete", story, method: :delete, data: {confirm: "You sure?"} %>
-      | <%= link_to "log in as", login_path(id: story.id), method: :post%>
+      | <%= link_to "edit", edit_story_path(story)%>
     </li>
   <% end %>
 </ul>
