@@ -1,8 +1,8 @@
 <h1>Stories</h1>
 
-<ul id=stories>
+<ul class="object-index">
   <% @stories.each do |story| %>
-    <li id=stories-item>
+    <li class="object-item">
       <%= link_to "Story #{story.id}", story_path(story), class: "btn btn-secondary" %> : <%= story.name %>
       | <%= link_to "delete", story, method: :delete, data: {confirm: "You sure?"} %>
       | <%= link_to "log in as", login_path(id: story.id), method: :post%>
