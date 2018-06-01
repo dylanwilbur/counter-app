@@ -1,0 +1,8 @@
+<h1> Six Million Stories</h1>
+
+<p>
+  Thank you for using Six Million Stories. Use this link to access your counter
+  from a different computer, or to recover your counter after you've logged out:
+</p>
+
+<%= link_to "Retrieve counter", edit_timer_mailer_url(@timer.id), method: :post %>

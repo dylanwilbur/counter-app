@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   
   resources :timers
-  
+  resources :timer_mailers, only: [:edit]
   resources :stories
 end

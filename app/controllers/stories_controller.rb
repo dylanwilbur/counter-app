@@ -1,4 +1,6 @@
 class StoriesController < ApplicationController
+  before_action :check_for_lockup
+  
   def new
     @story = Story.new
   end

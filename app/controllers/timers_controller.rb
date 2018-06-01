@@ -27,7 +27,8 @@ class TimersController < ApplicationController
     
     if @timer.save
       log_in @timer
-      flash[:success] = "Timer successfully created"
+      TimerMailer.log_in_code(@timer).deliver_now
+      flash[:success] = "Timer successfully created.#{" Check email for login link." if @timer.email.present? }"
       redirect_to @timer
     else
       render 'new'
