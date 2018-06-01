@@ -1,17 +1,17 @@
-<head><meta name="turbolinks-cache-control" content="no-preview"></head>
+<head>
+  <script data-turbolinks-eval=false>
+    var myVar = setInterval(myTimer, 1000);
+    var time = <%= @timer.elapsed_time %>
+    function myTimer() {
+      document.querySelector("clock").innerHTML = time;
+      time++;
+    }
+  </script>
+</head>
 
 <div class="container show-body">
   <div id='counter'>
     <h2><clock><%= @timer.elapsed_time %></clock></h2>
-    
-    <script>
-      var myVar = setInterval(myTimer, 1000);
-      var time = <%= @timer.elapsed_time %>
-      function myTimer() {
-        document.querySelector("clock").innerHTML = time;
-        time++;
-      }
-    </script>
   </div>
   
   <hr>

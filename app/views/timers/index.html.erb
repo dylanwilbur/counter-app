@@ -1,8 +1,8 @@
 <h1>Timers</h1>
 
-<ul id="object-index">
+<ul class="object-index">
   <% @timers.each do |timer| %>
-    <li id="object-item">
+    <li class="object-item">
       <%= link_to "Timer #{timer.id}", timer_path(timer), class: "btn btn-secondary" %> : <%= timer.elapsed_time %>
       | <%= link_to "delete", timer, method: :delete, data: {confirm: "You sure?"} %>
       | <%= link_to "log in as", login_path(id: timer.id), method: :post%>
