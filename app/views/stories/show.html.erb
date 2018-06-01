@@ -8,7 +8,7 @@
   <div class="box">
     <div class="row row-one">
       <div class="col-md-12 imageholder">
-        <% if !(@story.img.nil?) %>
+        <% if @story.img.present? %>
           <img class="img-fluid img-thumbnail visual img-responsive pull-left" src=<%= @story.img %>></img>
         <% end %>
         
