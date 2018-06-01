@@ -13,9 +13,10 @@ class TimersController < ApplicationController
     if cookies[:story_num].nil?
       cookies[:story_num] = rand(Story.count)
     else
-      cookies[:story_num] = ((cookies[:story_num].to_i + 1) % Story.count).to_s
+      cookies[:story_num] = ((cookies[:story_num].to_i + 1) % (Story.count)).to_s
     end
-    @story = Story.find_by(cookies[:story_num])
+    # shift range from [0,Story.count-1] to [1, Story.count]
+    @story = Story.find(cookies[:story_num].to_i + 1)
   end
   
   def index

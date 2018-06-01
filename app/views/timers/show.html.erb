@@ -1,7 +1,9 @@
+<head><meta name="turbolinks-cache-control" content="no-preview"></head>
+
 <div class="container show-body">
   <div id='counter'>
     <h2><clock><%= @timer.elapsed_time %></clock></h2>
-    <meta name="turbolinks-cache-control" content="no-preview">
+    
     <script>
       var myVar = setInterval(myTimer, 1000);
       var time = <%= @timer.elapsed_time %>
@@ -18,7 +20,13 @@
     <div class="box">
       <div class="row row-one">
         <div class="col-md-12 imageholder">
-          <%= render "layouts/stories/#{cookies[:story_num]}" %>
+          <% if (@story.img.present?) %>
+            <img class="img-fluid img-thumbnail visual img-responsive pull-left" src=<%= @story.img %>></img>
+          <% end %>
+          
+          <h1><%= @story.name %></h1></h1> 
+          
+          <p class="lead"><%= @story.content %></p>
         </div>
       </div>
     </div>
