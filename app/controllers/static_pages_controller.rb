@@ -12,4 +12,7 @@ class StaticPagesController < ApplicationController
   def for_teachers
   end
   
+  def inspiration
+  end
+  
 end

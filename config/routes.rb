@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy', as: 'logout'
   
   patch '/newStory', to: 'timers#newStory'
+  
+  get '/inspiration', to: 'static_pages#inspiration'
 
   root 'static_pages#home'
   
