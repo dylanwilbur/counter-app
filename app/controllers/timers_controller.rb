@@ -10,13 +10,7 @@ class TimersController < ApplicationController
   
   def show
     @timer = Timer.find(params[:id])
-    if cookies[:story_num].nil?
-      cookies[:story_num] = rand(Story.count)
-    else
-      cookies[:story_num] = ((cookies[:story_num].to_i + 1) % (Story.count)).to_s
-    end
-    # shift range from [0,Story.count-1] to [1, Story.count]
-    @story = Story.find(cookies[:story_num].to_i + 1)
+    update_story
   end
   
   def index
@@ -44,10 +38,24 @@ class TimersController < ApplicationController
     redirect_to timers_url
   end
   
+  def newStory
+    update_story
+  end
+  
   private
   
     def timer_params
       params.require(:timer).permit(:email)
+    end
+    
+    def update_story
+      if cookies[:story_num].nil?
+        cookies[:story_num] = rand(Story.count)
+      else
+        cookies[:story_num] = ((cookies[:story_num].to_i + 1) % (Story.count)).to_s
+      end
+      # shift range from [0,Story.count-1] to [1, Story.count]
+      @story = Story.find(cookies[:story_num].to_i + 1)
     end
   
 end

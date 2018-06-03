@@ -1,5 +1,5 @@
 <head>
-  <script data-turbolinks-eval=false>
+  <script>
     var myVar = setInterval(myTimer, 1000);
     var time = <%= @timer.elapsed_time %>
     function myTimer() {
@@ -16,23 +16,13 @@
   
   <hr>
   
-  <div class="container">
-    <div class="box">
-      <div class="row row-one">
-        <div class="col-md-12 imageholder">
-          <% if @story.img.present? %>
-            <img class="img-fluid img-thumbnail visual img-responsive pull-left" src=<%= @story.img %>></img>
-          <% end %>
-          
-          <h1><%= @story.name %></h1></h1> 
-          
-          <p class="lead"><%= @story.content %></p>
-        </div>
-      </div>
-    </div>
+  <div id="story">
+    <%= render 'story' %>
   </div>
   
-  <div style="text-align:center;">
-    <%= button_to 'Next Story', root_path, method: :get, class: "btn btn-primary" %>
+  <div id="new-story-button">
+    <%= button_to 'New Story', newStory_path, method: :patch, remote: true, class: "btn btn-primary" %>
   </div>
+  
+  
 </div>

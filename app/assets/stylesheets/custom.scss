@@ -56,11 +56,11 @@ blockquote {
 
 /* index */
 
-#object-index {
+.object-index {
   list-style-type: none;
 }
 
-#object-item {
+.object-item {
   margin: 5px 0;
 }
 
@@ -203,4 +203,9 @@ input {
   .form-control {
     color: red;
   }
+}
+
+#new-story-button {
+  text-align: center;
+  margin-top: 15px;
 }
