@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  respond_to :js, :html
+  respond_to :html, :js
   
   def home
     if !session[:timer_id].nil?
