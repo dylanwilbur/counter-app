@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require rails-ujs
-//= require fullpage.js/dist/jquery.fullpage.js
+//= require /fullpage.js/dist/jquery.fullpage.js
 //= require_tree .
 
 $(document).ready(function() {
