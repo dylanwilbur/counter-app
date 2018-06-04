@@ -16,8 +16,8 @@
 //= require rails-ujs
 //= require_tree .
 
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-	  sectionsColor : ['#AD4337', '#E7E1DD', '#C45648', '#C4BCB7']
-	});
-});
+// $(document).ready(function() {
+// 	$('#fullpage').fullpage({
+// 	  sectionsColor : ['#AD4337', '#E7E1DD', '#C45648', '#C4BCB7']
+// 	});
+// });
