@@ -1,0 +1,1 @@
+function myTimer(){}var myVar=setInterval(myTimer,1e3);
