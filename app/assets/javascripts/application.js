@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require bootstrap
+//= require jquery.fullPage.js
 //= require rails-ujs
 //= require_tree .

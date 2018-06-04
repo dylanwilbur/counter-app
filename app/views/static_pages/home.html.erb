@@ -24,8 +24,12 @@
         </div>
       <% else %>
         <div class="wrapper text-center">
+          <h6>
+            Begin your experience by creating a new counter, or by learning more
+            about the site:
+          </h6>
           <div class="btn-group">
-            <%= button_to 'Admin', timers_index_path, method: :get, class: "btn btn-primary"%>
+            <%= button_to 'For Teachers', for_teachers_path, method: :get, class: "btn btn-primary"%>
             <%= button_to 'New Counter', new_timer_path, method: :get, class: "btn btn-primary"%>
             <%= button_to 'About', about_path, method: :get, class: "btn btn-primary"%>
           </div>

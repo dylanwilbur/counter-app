@@ -1,7 +1,7 @@
 /* Custom Variables */
 
 $theme-colors: (
-  "primary": #a70000
+  "primary": #AD4337
 );
 
 @import "bootstrap";
@@ -11,6 +11,16 @@ $theme-colors: (
   -webkit-box-sizing: content-box;
   box-sizing:         content-box;
 }
+
+$red-100: #DE7464;
+$red-200: #C45648;
+$red-300: #AD4337;
+$red-400: #953228;
+
+$grey-alt-100: #FEFAF7;
+$grey-alt-200: #E7E1DD;
+$grey-alt-300: #C4BCB7;
+$grey-alt-400: #A19892;
 
 body {
   padding-top: 60px;
@@ -257,4 +267,70 @@ cite {
 .carousel-item {
   width: 100%;
   height: 15em;
+}
+
+p > b {
+  font-weight: 500;
+}
+
+// .section {
+//   text-align: center;
+//   position: relative;
+// }
+.section {
+  text-align: center;
+  .section-content {
+    padding: 0 100px;
+    text-align: center;
+    width: 100%;
+    h1 {
+      font-size: 15em;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 2.5em;
+    }
+    h3 {
+      font-size: 6em;
+    }
+    h4 {
+      font-size: 3em;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 2em;
+      text-align: center;
+      b {
+        font-weight: 500;
+      }
+    }
+  }
+  .slide {
+    .section-content {
+      blockquote {
+        p {
+          padding: 0 50px;
+        }
+      }
+    }
+  }
+}
+
+.fp-controlArrow {
+  padding: 0 50px;
+}
+
+.section-content .card {
+  margin: 10px 75px;
+  .card-body {
+    blockquote {
+      p {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.dark {
+  color: $grey-alt-200;
 }

@@ -2,6 +2,7 @@
   "name": "counter_app",
   "private": true,
   "dependencies": {
+    "fullpage.js": "^2.9.7",
     "jquery": "^3.3.1"
   }
 }
