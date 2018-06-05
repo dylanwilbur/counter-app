@@ -14,5 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require rails-ujs
-//= require fullpage.js/dist/jquery.fullpage.js
+//= require jquery.fullpage.js
 //= require_tree .
+
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+	  sectionsColor : ['#AD4337', '#E7E1DD', '#AD4337', '#E7E1DD', '#AD4337']
+	});
+});
