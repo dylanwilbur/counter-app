@@ -19,6 +19,6 @@
 
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-	  sectionsColor : ['#AD4337', '#E7E1DD', '#C45648', '#C4BCB7']
+	  sectionsColor : ['#AD4337', '#E7E1DD', '#AD4337', '#E7E1DD', '#AD4337']
 	});
 });
