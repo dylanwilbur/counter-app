@@ -16,4 +16,7 @@ class StaticPagesController < ApplicationController
   def inspiration
   end
   
+  def contact
+  end
+  
 end

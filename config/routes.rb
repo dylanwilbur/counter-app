@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   
   patch '/newStory', to: 'timers#newStory'
   
+  get '/contact', to: 'static_pages#contact'
+  
   get '/inspiration', to: 'static_pages#inspiration'
 
   root 'static_pages#home'
