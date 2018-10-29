@@ -24,13 +24,13 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
-      <% if Rails.env.development? %>
-        <div class="card">
-          <div class="card-body">
-            <%= debug(params) %>
-          </div>
-        </div>
-      <% end %>
+      <%# <% if Rails.env.development? %1> %>
+      <%#   <div class="card"> %>
+      <%#     <div class="card-body"> %>
+      <%#       <%= debug(params) %1> %>
+      <%#     </div> %>
+      <%#   </div> %>
+      <%# <% end %1> %>
     </div>
   </body>
 </html>
