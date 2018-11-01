@@ -4,13 +4,12 @@ gem 'rails',        '5.1.4'
 gem 'puma',         '3.9.1'
 gem 'responders'
 gem 'sass-rails',   '5.0.6'
-gem 'bootstrap',    '~> 4.0.0'
 gem 'uglifier',     '3.2.0'
+gem "bootstrap", ">= 4.1.2"
 gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'jbuilder',     '2.7.0'
 gem 'lockup'
-gem 'webpacker'
 
 
 group :development, :test do
