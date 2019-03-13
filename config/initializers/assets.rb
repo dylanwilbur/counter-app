@@ -17,6 +17,4 @@ Rails.application.config.public_file_server.enabled = true
 
 Rails.application.config.assets.precompile += %w( counter.js )
 
-Rails.application.config.assets.precompile += %w( jquery.fullpage.js )
-
 Rails.application.config.assets.precompile += %w( jquery_ujs.js )
